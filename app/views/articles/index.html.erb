@@ -2,8 +2,6 @@
 
 <h1>Articles</h1>
 
-<%= render "form", article: @article %>
-
 <div id="articles">
   <% @articles.each do |article| %>
     <%#= render article %>
@@ -12,6 +10,10 @@
       <%= link_to "Show this article", article %>
     </p>
   <% end %>
+</div>
+
+<div class="sticky">
+  <%= render "form", article: @article %>
 </div>
 
 <%= link_to "New article", new_article_path %>
