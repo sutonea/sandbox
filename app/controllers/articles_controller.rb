@@ -7,14 +7,6 @@ class ArticlesController < ApplicationController
     @articles = Article.order('id desc').all
   end
 
-  # GET /articles/1 or /articles/1.json
-  def show
-  end
-
-  # GET /articles/1/edit
-  def edit
-  end
-
   # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
