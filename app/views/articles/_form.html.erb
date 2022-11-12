@@ -25,3 +25,7 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<% unless article.new_record? %>
+  <%= button_to "Destroy this article", article, method: :delete, turbo: true %>
+<% end %>
