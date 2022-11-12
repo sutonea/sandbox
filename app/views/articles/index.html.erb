@@ -1,8 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Articles</h1>
+<h1 class="header panel">Articles</h1>
 
-<div id="articles">
+<div id="articles" class="panel">
   <% @articles.each do |article| %>
     <%#= render article %>
     <%= render "form", article: article %>
@@ -10,6 +10,6 @@
   <% end %>
 </div>
 
-<div class="sticky">
+<div class="sticky-bottom form panel">
   <%= render "form", article: @article %>
 </div>

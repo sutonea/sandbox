@@ -3,9 +3,27 @@ position: relative;
 height: 100vh;
 }
 
-.sticky {
-  position: absolute;
+.header {
+  border-style: double;
+  position: sticky;
+  top: 0;
+  margin-bottom: 30px;
+  padding: 10px;
+  z-index: 10;
+}
+
+.sticky-bottom {
+  position: sticky;
   bottom: 0;
   margin-bottom: 30px;
   z-index: 10;
+}
+
+.panel {
+  background-color: white
+}
+
+.form {
+  padding: 10px;
+  border-style: double
 }
