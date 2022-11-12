@@ -3,16 +3,12 @@ class ArticlesController < ApplicationController
 
   # GET /articles or /articles.json
   def index
-    @articles = Article.all
+    @article = Article.new
+    @articles = Article.order('id desc').all
   end
 
   # GET /articles/1 or /articles/1.json
   def show
-  end
-
-  # GET /articles/new
-  def new
-    @article = Article.new
   end
 
   # GET /articles/1/edit
@@ -25,11 +21,9 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to article_url(@article), notice: "Article was successfully created." }
-        format.json { render :show, status: :created, location: @article }
+        format.html { redirect_to articles_url }
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
+        format.html { render :index, status: :unprocessable_entity }
       end
     end
   end
