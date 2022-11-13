@@ -18,12 +18,8 @@ class ArticlesController < ApplicationController
 
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
-    respond_to do |format|
-      if @article.update(article_params)
-        format.html { redirect_to articles_url }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-      end
+    if @article.update(article_params)
+      render :update
     end
   end
 
