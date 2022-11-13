@@ -11,12 +11,8 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
 
-    respond_to do |format|
-      if @article.save
-        format.html { redirect_to articles_url }
-      else
-        format.html { render :index, status: :unprocessable_entity }
-      end
+    if @article.save
+      render :create
     end
   end
 

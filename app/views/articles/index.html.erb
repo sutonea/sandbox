@@ -5,7 +5,7 @@
 <div id="articles" class="panel">
   <% @articles.each do |article| %>
     <%#= render article %>
-    <%= render "form", article: article %>
+    <%= render "article_unit", article: article %>
     <p>
   <% end %>
 </div>
