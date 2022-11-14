@@ -1,5 +1,10 @@
 # README
 
+## tasks
+
+<img width="872" alt="image" src="https://user-images.githubusercontent.com/748411/201791616-fd1e222c-8e5c-492f-8ea8-11ce2e9cbb09.png">
+
+
 ## Routes
 
 `./bin/rails routes -E`
