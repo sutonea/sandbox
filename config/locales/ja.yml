@@ -1,0 +1,20 @@
+ja:
+  activerecord:
+    models:
+      task: タスク
+    attributes:
+      task:
+        label: タイトル
+        estimate_hours: 予定時間
+        actual_hours: 実績時間
+        priority: 優先度
+  helpers:
+    submit:
+      create: "登録"
+      update: "更新"
+      submit: "保存"
+    label:
+      user:
+        email: "メールアドレス"
+        password: "パスワード"
+

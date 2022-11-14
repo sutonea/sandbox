@@ -13,11 +13,11 @@
 
   <div>
     <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, onchange: "this.form.requestSubmit()" %>
   </div>
 
   <div>
-    <%= form.label :body, style: "display: block" %>
+    <%= form.label :body, style: "display: block", onkeyup: "this.form.requestSubmit()" %>
     <%= form.text_area :body %>
   </div>
 

@@ -1,0 +1,63 @@
+body {
+  background-color: #111;	
+}
+
+input.title {
+  font-size: 1.5em;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+  width: 5%;
+  margin: 0 1em 0 0.5em;
+}
+
+label {
+  font-size: 0.8em;
+}
+
+.task_unit {
+  background-color: #444;
+  color: #CCC;
+  margin: 1em; 
+  padding: 1em;
+  border-radius: 0.5em;
+  max-width: 375px; /* モバイル向け */
+  float: left;
+}
+
+.title_container {
+  display: flex;
+  width: 100%;
+}
+
+.note_container {
+  display: flex;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.note {
+  width: 100%;
+}
+
+.numbers_container {
+  display: flex;
+  align-items: flex-end;
+  width: 80%;
+  float: left;
+}
+
+.number input {
+  font-size: 1.2em;
+  width: 80%;
+}
+
+.button {
+  font-size: 1.4em;
+  margin-top: 0.3em;
+  padding: 0.3em;
+  margin-left: 0.5em;
+}

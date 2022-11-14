@@ -1,0 +1,58 @@
+<div>
+  <datalist id="list-hours">
+    <option value="24" />
+    <option value="16" />
+    <option value="8" />
+  </datalist>
+</div>
+<%= form_with(model: task) do |form| %>
+  <% if task.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+        <% task.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="title_container">
+    <%= form.label :finished, style: "display: none" %>
+    <%= form.check_box :finished, disabled: task.new_record?, onchange: update_task(task) %>
+
+    <%= form.text_field :title, class: "title", onchange: update_task(task) %>
+  </div>
+
+  <div class="note_container" >
+    <%= form.text_field :note, placeholder: "Note", class: "note", onchange: update_task(task) %>
+  </div>
+
+  <div class="numbers_container">
+    <div class="estimate_hours number">
+      <%= form.label :estimate_hours, "予定時間", style: "display: block" %>
+      <%= form.number_field :estimate_hours, list: "list-hours", step: 0.25, min: 0, onchange: update_task(task) %>
+    </div>
+
+    <div class="actual_hours number">
+      <%= form.label :actual_hours, "実績時間", style: "display: block" %>
+      <%= form.number_field :actual_hours, list: "list-hours", step: 0.25, min: 0, onchange: update_task(task) %>
+    </div>
+
+    <div class="number">
+      <%= form.label :priority, "優先度", style: "display: block" %>
+      <%= form.number_field :priority, onchange: update_task(task) %>
+    </div>
+
+  </div>
+  <div class="button_container">
+    <% if task.new_record? %>
+      <%= form.submit class: "button" %>
+    <% end %>
+  </div>
+
+<% end %>
+<% unless task.new_record? %>
+  <%= button_to "削除", task, method: :delete, class: "button delete" %>
+<% end %>
