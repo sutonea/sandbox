@@ -6,7 +6,7 @@
   </datalist>
 </div>
 <div class="form_wrapper">
-  <%= form_with(model: task) do |form| %>
+  <%= form_with(model: task, data: { controller: "tasks", action: "turbo:submit-end->tasks#reset"}) do |form| %>
     <div class="flex1 h_full">
       <div class="button_wrapper">
         <%= form.check_box :finished, disabled: task.new_record?, onchange: update_task(task) %>
