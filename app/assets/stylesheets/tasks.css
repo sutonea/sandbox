@@ -2,52 +2,41 @@ body {
   background-color: #111;	
 }
 
-input.title {
-  font-size: 1.5em;
-  width: 100%;
+.task_unit {
+  background-color: #444;
+  color: #CCC;
+  margin: 0.3em; 
+  padding: 1em;
+  border-radius: 0.5em;
+  width: 50em;
+  float: left;
 }
 
-input[type="checkbox"] {
-  transform: scale(2);
-  width: 5%;
-  margin: 0 1em 0 0.5em;
+.form_wrapper {
+  float: left;
+}
+
+input.title {
+  font-size: 1.5em;
 }
 
 label {
   font-size: 0.8em;
 }
 
-.task_unit {
-  background-color: #444;
-  color: #CCC;
-  margin: 1em; 
-  padding: 1em;
-  border-radius: 0.5em;
-  max-width: 375px; /* モバイル向け */
-  float: left;
+.text_container {
+  width: 25em;
 }
 
-.title_container {
-  display: flex;
-  width: 100%;
-}
-
-.note_container {
-  display: flex;
-  width: 100%;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.note {
-  width: 100%;
+.text_container input {
+  width: 90%;
 }
 
 .numbers_container {
   display: flex;
   align-items: flex-end;
-  width: 80%;
   float: left;
+  width: 15em;
 }
 
 .number input {
@@ -60,4 +49,34 @@ label {
   margin-top: 0.3em;
   padding: 0.3em;
   margin-left: 0.5em;
+}
+
+.flex1 {
+display: flex;
+flex-direction: row;
+}
+
+.h_full {
+  width: 100%;
+}
+
+.flex_v {
+display: flex;
+flex-direction: column;
+}
+
+.flex_h {
+display: flex;
+flex-direction: row;
+}
+
+.button_wrapper {
+  border-width: 1px;
+  border-color: red;
+  width: 4.5em;
+}
+
+.button_wrapper input {
+  width: 90%;
+  height: 90%;
 }
