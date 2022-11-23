@@ -2,8 +2,14 @@
 
 <h1><%= t("activerecord.models.task") %></h1>
 
-<%= render "task_unit", task: @task %>
+<%# Form for new %>
+<%= form_with(model: @task, data: { controller: "tasks", action: "turbo:submit-end->tasks#reset"}) do |form| %>
+  <div class="button_wrapper">
+    <%= form.submit class: "button" %>
+  </div>
+<% end %>
 
+<%# Forms for edit %>
 <div id="tasks">
   <% @tasks.each do |task| %>
     <%= render "task_unit", task: task %>

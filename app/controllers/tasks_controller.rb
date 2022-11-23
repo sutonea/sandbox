@@ -14,7 +14,7 @@ class TasksController < ApplicationController
   #end
 
   def create
-    @task = Task.new(task_params)
+    @task = Task.new
     if @task.save
       render :create
     end

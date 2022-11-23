@@ -10,7 +10,7 @@ ja:
         priority: 優先度
   helpers:
     submit:
-      create: "登録"
+      create: "追加"
       update: "更新"
       submit: "保存"
     label:
