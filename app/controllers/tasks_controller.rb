@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: %i[ show edit update destroy ]
 
   def index
-    @tasks = Task.order('priority desc').all
+    @tasks = Task.order('finished asc, priority desc').all
     @task = Task.new
   end
 
